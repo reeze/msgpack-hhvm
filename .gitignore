@@ -1,3 +1,6 @@
+# Vim files
+*.swp
+
 # Compiled Object files
 *.slo
 *.lo
@@ -19,3 +22,10 @@
 *.exe
 *.out
 *.app
+
+# CMake files
+CMakeFiles
+CMakeCache.txt
+cmake_install.cmake
+install_manifest.txt
+Makefile
