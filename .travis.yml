@@ -1,0 +1,14 @@
+language: php
+
+php:
+  - hhvm
+
+install:
+  - sudo apt-get install cmake
+
+script:
+  - hphpize && cmake . && make
+
+notifications:
+  email:
+    - reeze.xia@gmail.com
