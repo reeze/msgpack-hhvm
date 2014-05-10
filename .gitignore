@@ -1,6 +1,7 @@
 # Vim files
 *.swp
 *.swo
+*.swn
 
 # Compiled Object files
 *.slo

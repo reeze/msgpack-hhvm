@@ -1,3 +1,7 @@
 <?hh
+
 <<__Native>>
-function msgpack_sum(int $a, int $b): int;
+function msgpack_pack(mixed $input): string;
+
+<<__Native>>
+function msgpack_unpack(string $pack): mixed;

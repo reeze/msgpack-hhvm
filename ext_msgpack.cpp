@@ -15,24 +15,44 @@
 */
 
 #include "hphp/runtime/base/base-includes.h"
+#include <msgpack.hpp>
 
-#include <msgpack.h>
+#include "type-variant.h"
+
+#define MSGPACK_HHVM_VERSION "0.0.1"
 
 namespace HPHP {
 
-static int64_t HHVM_FUNCTION(msgpack_sum, int64_t a, int64_t b) {
-  return a + b;
+static String HHVM_FUNCTION(msgpack_pack, const Variant &var) {
+  msgpack::sbuffer sbuf;
+  msgpack::pack(sbuf, var);
+
+  return String(sbuf.data(), sbuf.size(), AttachString);
+}
+
+static Variant HHVM_FUNCTION(msgpack_unpack, const String &pack) {
+  msgpack::zone zone;
+  msgpack::object obj;
+  msgpack::unpack(pack.c_str(), pack.size(), NULL, &zone, &obj);
+
+  Variant v;
+
+  obj.convert(&v);
+
+  return v;
 }
 
 static class MsgpackExtension : public Extension {
  public:
-  MsgpackExtension() : Extension("msgpack") {}
+  MsgpackExtension() : Extension("msgpack", MSGPACK_HHVM_VERSION) {}
   virtual void moduleInit() {
-    HHVM_FE(msgpack_sum);
+    HHVM_FE(msgpack_pack);
+    HHVM_FE(msgpack_unpack);
+
     loadSystemlib();
   }
 } s_msgpack_extension;
 
-HHVM_GET_MODULE(msgpack)
+HHVM_GET_MODULE(msgpack);
 
 } // namespace HPHP
