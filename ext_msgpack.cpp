@@ -49,6 +49,9 @@ static class MsgpackExtension : public Extension {
     HHVM_FE(msgpack_pack);
     HHVM_FE(msgpack_unpack);
 
+    HHVM_FALIAS(msgpack_serialize, msgpack_pack);
+    HHVM_FALIAS(msgpack_unserialize, msgpack_unpack);
+
     loadSystemlib();
   }
 } s_msgpack_extension;
