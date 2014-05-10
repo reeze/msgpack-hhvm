@@ -1,0 +1,63 @@
+array(2) {
+  [0]=>
+  object(MyObj)#%d (4) {
+    [%r"?data"?:("MyObj":)?private"?%r]=>
+    string(8) "datadata"
+    [%r"?priv"?:("MyObj":)?private"?%r]=>
+    string(8) "privdata"
+    ["pdata"]=>
+    string(8) "pubdata0"
+    ["subary"]=>
+    array(2) {
+      [0]=>
+      object(SubObj)#%d (3) {
+        [%r"?subdata"?:("SubObj":)?private"?%r]=>
+        string(11) "subdatadata"
+        [%r"?subpriv"?:("SubObj":)?private"?%r]=>
+        string(11) "subprivdata"
+        ["subpdata"]=>
+        string(12) "subpubdata00"
+      }
+      [1]=>
+      object(SubObj)#%d (3) {
+        [%r"?subdata"?:("SubObj":)?private"?%r]=>
+        string(11) "subdatadata"
+        [%r"?subpriv"?:("SubObj":)?private"?%r]=>
+        string(11) "subprivdata"
+        ["subpdata"]=>
+        string(10) "subpdata01"
+      }
+    }
+  }
+  [1]=>
+  object(MyObj)#%d (4) {
+    [%r"?data"?:("MyObj":)?private"?%r]=>
+    string(8) "datadata"
+    [%r"?priv"?:("MyObj":)?private"?%r]=>
+    string(8) "privdata"
+    ["pdata"]=>
+    string(8) "pubdata1"
+    ["subary"]=>
+    array(2) {
+      [0]=>
+      object(SubObj)#%d (3) {
+        [%r"?subdata"?:("SubObj":)?private"?%r]=>
+        string(11) "subdatadata"
+        [%r"?subpriv"?:("SubObj":)?private"?%r]=>
+        string(11) "subprivdata"
+        ["subpdata"]=>
+        string(11) "subpubdata1"
+      }
+      [1]=>
+      object(SubObj)#%d (3) {
+        [%r"?subdata"?:("SubObj":)?private"?%r]=>
+        string(11) "subdatadata"
+        [%r"?subpriv"?:("SubObj":)?private"?%r]=>
+        string(11) "subprivdata"
+        ["subpdata"]=>
+        string(10) "subpdata11"
+      }
+    }
+  }
+}
+OK

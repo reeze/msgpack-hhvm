@@ -1,0 +1,5 @@
+<?php
+if (!extension_loaded("msgpack") || !extension_loaded("mcrypt")) {
+    echo "skip";
+}
+?>

@@ -1,0 +1,63 @@
+array(2) {
+  [0]=>
+  array(4) {
+    ["data"]=>
+    string(8) "datadata"
+    ["priv"]=>
+    string(8) "privdata"
+    ["pdata"]=>
+    string(8) "pubdata0"
+    ["subary"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["subdata"]=>
+        string(11) "subdatadata"
+        ["subpriv"]=>
+        string(11) "subprivdata"
+        ["subpdata"]=>
+        string(12) "subpubdata00"
+      }
+      [1]=>
+      array(3) {
+        ["subdata"]=>
+        string(11) "subdatadata"
+        ["subpriv"]=>
+        string(11) "subprivdata"
+        ["subpdata"]=>
+        string(10) "subpdata01"
+      }
+    }
+  }
+  [1]=>
+  array(4) {
+    ["data"]=>
+    string(8) "datadata"
+    ["priv"]=>
+    string(8) "privdata"
+    ["pdata"]=>
+    string(8) "pubdata1"
+    ["subary"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["subdata"]=>
+        string(11) "subdatadata"
+        ["subpriv"]=>
+        string(11) "subprivdata"
+        ["subpdata"]=>
+        string(11) "subpubdata1"
+      }
+      [1]=>
+      array(3) {
+        ["subdata"]=>
+        string(11) "subdatadata"
+        ["subpriv"]=>
+        string(11) "subprivdata"
+        ["subpdata"]=>
+        string(10) "subpdata11"
+      }
+    }
+  }
+}
+OK

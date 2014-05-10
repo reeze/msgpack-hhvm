@@ -1,0 +1,13 @@
+object
+84c0a34f626aa16101a4002a006202a6004f626a006303
+object(Obj)#%d (4) {
+  ["a"]=>
+  int(1)
+  ["b:protected"]=>
+  int(2)
+  ["c:private"]=>
+  int(3)
+  ["d"]=>
+  NULL
+}
+OK

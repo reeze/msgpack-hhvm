@@ -1,0 +1,18 @@
+object(MyObj)#%d (4) {
+  [%r"?data"?:("MyObj":)?private"?%r]=>
+  string(8) "datadata"
+  [%r"?priv"?:("MyObj":)?private"?%r]=>
+  string(8) "privdata"
+  ["pdata"]=>
+  string(7) "pubdata"
+  ["subary"]=>
+  object(SubObj)#%d (3) {
+    [%r"?subdata"?:("SubObj":)?private"?%r]=>
+    string(11) "subdatadata"
+    [%r"?subpriv"?:("SubObj":)?private"?%r]=>
+    string(11) "subprivdata"
+    ["subpdata"]=>
+    string(10) "subpubdata"
+  }
+}
+OK

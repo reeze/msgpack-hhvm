@@ -1,0 +1,8 @@
+bool true
+c3
+bool(true)
+OK
+bool false
+c2
+bool(false)
+OK

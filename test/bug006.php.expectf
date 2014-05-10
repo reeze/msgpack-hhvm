@@ -1,0 +1,14 @@
+Array
+(
+    [key] => 2
+    [1] => 3
+)
+Array
+(
+    [0] => dummy
+    [1] => foo
+    [2] => bar
+)
+string(3) "foo"
+string(3) "bar"
+string(5) "dummy"

@@ -1,0 +1,84 @@
+objectrec
+88c0a44f626a32a26161c0a5002a006262c0a8004f626a32006363c0a9004f626a32006f626a84c0a34f626aa16101a4002a006202a6004f626a006303a16101a16202a16303
+object(Obj2)#%d (7) {
+  ["aa"]=>
+  NULL
+  ["bb:protected"]=>
+  NULL
+  ["cc:private"]=>
+  NULL
+  ["obj:private"]=>
+  object(Obj)#%d (3) {
+    ["a"]=>
+    int(1)
+    ["b:protected"]=>
+    int(2)
+    ["c:private"]=>
+    int(3)
+  }
+  ["a"]=>
+  int(1)
+  ["b"]=>
+  int(2)
+  ["c"]=>
+  int(3)
+}
+OK
+objectrecarr
+82c0a44f626a33aa004f626a33006f626a739484c0a34f626aa16100a4002a006200a6004f626a00630484c0a34f626aa16100a4002a006201a6004f626a00630484c0a34f626aa16100a4002a006202a6004f626a00630484c0a34f626aa16100a4002a006203a6004f626a006304
+object(Obj3)#%d (1) {
+  ["objs:private"]=>
+  array(4) {
+    [0]=>
+    object(Obj)#%d (3) {
+      ["a"]=>
+      int(0)
+      ["b:protected"]=>
+      int(0)
+      ["c:private"]=>
+      int(4)
+    }
+    [1]=>
+    object(Obj)#%d (3) {
+      ["a"]=>
+      int(0)
+      ["b:protected"]=>
+      int(1)
+      ["c:private"]=>
+      int(4)
+    }
+    [2]=>
+    object(Obj)#%d (3) {
+      ["a"]=>
+      int(0)
+      ["b:protected"]=>
+      int(2)
+      ["c:private"]=>
+      int(4)
+    }
+    [3]=>
+    object(Obj)#%d (3) {
+      ["a"]=>
+      int(0)
+      ["b:protected"]=>
+      int(3)
+      ["c:private"]=>
+      int(4)
+    }
+  }
+}
+OK
+objectselfrec
+83c0a44f626a34a7004f626a34006164a9004f626a34006f626a82c0040001
+object(Obj4)#%d (2) {
+  ["a:private"]=>
+  int(100)
+  ["obj:private"]=>
+  object(Obj4)#%d (2) {
+    ["a:private"]=>
+    int(100)
+    ["obj:private"]=>
+    *RECURSION*
+  }
+}
+OK

@@ -1,0 +1,320 @@
+object(Obj)#%d (3) {
+  ["a"]=>
+  NULL
+  [%r"?b"?:protected"?%r]=>
+  NULL
+  [%r"?c"?:("Obj":)?private"?%r]=>
+  NULL
+}
+OK
+object(Obj)#%d (3) {
+  ["a"]=>
+  bool(true)
+  [%r"?b"?:protected"?%r]=>
+  NULL
+  [%r"?c"?:("Obj":)?private"?%r]=>
+  NULL
+}
+OK
+object(Obj)#%d (3) {
+  ["a"]=>
+  bool(false)
+  [%r"?b"?:protected"?%r]=>
+  NULL
+  [%r"?c"?:("Obj":)?private"?%r]=>
+  NULL
+}
+OK
+object(Obj)#%d (3) {
+  ["a"]=>
+  int(0)
+  [%r"?b"?:protected"?%r]=>
+  NULL
+  [%r"?c"?:("Obj":)?private"?%r]=>
+  NULL
+}
+OK
+object(Obj)#%d (3) {
+  ["a"]=>
+  int(1)
+  [%r"?b"?:protected"?%r]=>
+  NULL
+  [%r"?c"?:("Obj":)?private"?%r]=>
+  NULL
+}
+OK
+object(Obj)#%d (3) {
+  ["a"]=>
+  int(-1)
+  [%r"?b"?:protected"?%r]=>
+  NULL
+  [%r"?c"?:("Obj":)?private"?%r]=>
+  NULL
+}
+OK
+object(Obj)#%d (3) {
+  ["a"]=>
+  int(1000)
+  [%r"?b"?:protected"?%r]=>
+  NULL
+  [%r"?c"?:("Obj":)?private"?%r]=>
+  NULL
+}
+OK
+object(Obj)#%d (3) {
+  ["a"]=>
+  int(-1000)
+  [%r"?b"?:protected"?%r]=>
+  NULL
+  [%r"?c"?:("Obj":)?private"?%r]=>
+  NULL
+}
+OK
+object(Obj)#%d (3) {
+  ["a"]=>
+  int(100000)
+  [%r"?b"?:protected"?%r]=>
+  NULL
+  [%r"?c"?:("Obj":)?private"?%r]=>
+  NULL
+}
+OK
+object(Obj)#%d (3) {
+  ["a"]=>
+  int(-100000)
+  [%r"?b"?:protected"?%r]=>
+  NULL
+  [%r"?c"?:("Obj":)?private"?%r]=>
+  NULL
+}
+OK
+object(Obj)#%d (3) {
+  ["a"]=>
+  float(123.456)
+  [%r"?b"?:protected"?%r]=>
+  NULL
+  [%r"?c"?:("Obj":)?private"?%r]=>
+  NULL
+}
+OK
+object(Obj)#%d (3) {
+  ["a"]=>
+  string(0) ""
+  [%r"?b"?:protected"?%r]=>
+  NULL
+  [%r"?c"?:("Obj":)?private"?%r]=>
+  NULL
+}
+OK
+object(Obj)#%d (3) {
+  ["a"]=>
+  string(6) "foobar"
+  [%r"?b"?:protected"?%r]=>
+  NULL
+  [%r"?c"?:("Obj":)?private"?%r]=>
+  NULL
+}
+OK
+object(Obj)#%d (3) {
+  ["a"]=>
+  NULL
+  [%r"?b"?:protected"?%r]=>
+  NULL
+  [%r"?c"?:("Obj":)?private"?%r]=>
+  NULL
+}
+OK
+object(Obj)#%d (3) {
+  ["a"]=>
+  int(1)
+  [%r"?b"?:protected"?%r]=>
+  int(2)
+  [%r"?c"?:("Obj":)?private"?%r]=>
+  int(3)
+}
+OK
+object(Obj)#%d (3) {
+  ["a"]=>
+  array(3) {
+    [0]=>
+    int(1)
+    [1]=>
+    int(2)
+    [2]=>
+    int(3)
+  }
+  [%r"?b"?:protected"?%r]=>
+  array(3) {
+    [0]=>
+    int(4)
+    [1]=>
+    int(5)
+    [2]=>
+    int(6)
+  }
+  [%r"?c"?:("Obj":)?private"?%r]=>
+  array(3) {
+    [0]=>
+    int(7)
+    [1]=>
+    int(8)
+    [2]=>
+    int(9)
+  }
+}
+OK
+object(Obj)#%d (4) {
+  ["a"]=>
+  int(1)
+  [%r"?b"?:protected"?%r]=>
+  int(2)
+  [%r"?c"?:("Obj":)?private"?%r]=>
+  int(3)
+  [3]=>
+  int(4)
+}
+SKIP
+object(Obj)#%d (3) {
+  ["a"]=>
+  string(3) "foo"
+  [%r"?b"?:protected"?%r]=>
+  string(6) "foobar"
+  [%r"?c"?:("Obj":)?private"?%r]=>
+  string(4) "hoge"
+}
+OK
+object(Obj)#%d (3) {
+  ["a"]=>
+  int(1)
+  [%r"?b"?:protected"?%r]=>
+  int(2)
+  [%r"?c"?:("Obj":)?private"?%r]=>
+  NULL
+}
+OK
+object(Obj)#%d (5) {
+  ["a"]=>
+  NULL
+  [%r"?b"?:protected"?%r]=>
+  NULL
+  [%r"?c"?:("Obj":)?private"?%r]=>
+  NULL
+  ["one"]=>
+  int(1)
+  ["two"]=>
+  int(2)
+}
+OK
+object(Obj)#%d (4) {
+  ["a"]=>
+  NULL
+  [%r"?b"?:protected"?%r]=>
+  NULL
+  [%r"?c"?:("Obj":)?private"?%r]=>
+  NULL
+  [""]=>
+  string(5) "empty"
+}
+SKIP
+object(Obj)#%d (3) {
+  ["a"]=>
+  int(1)
+  [%r"?b"?:protected"?%r]=>
+  int(2)
+  [%r"?c"?:("Obj":)?private"?%r]=>
+  int(3)
+}
+OK
+object(Obj)#%d (3) {
+  ["a"]=>
+  int(1)
+  [%r"?b"?:protected"?%r]=>
+  int(2)
+  [%r"?c"?:("Obj":)?private"?%r]=>
+  int(3)
+}
+OK
+object(Obj)#%d (3) {
+  ["a"]=>
+  int(1)
+  [%r"?b"?:protected"?%r]=>
+  int(2)
+  [%r"?c"?:("Obj":)?private"?%r]=>
+  int(3)
+}
+OK
+object(Obj)#%d (3) {
+  ["a"]=>
+  array(1) {
+    [0]=>
+    string(3) "foo"
+  }
+  [%r"?b"?:protected"?%r]=>
+  array(1) {
+    [0]=>
+    string(3) "foo"
+  }
+  [%r"?c"?:("Obj":)?private"?%r]=>
+  NULL
+}
+OK
+object(Obj)#%d (4) {
+  ["a"]=>
+  array(2) {
+    ["b"]=>
+    string(1) "c"
+    ["d"]=>
+    string(1) "e"
+  }
+  [%r"?b"?:protected"?%r]=>
+  NULL
+  [%r"?c"?:("Obj":)?private"?%r]=>
+  NULL
+  ["f"]=>
+  array(1) {
+    ["g"]=>
+    string(1) "h"
+  }
+}
+OK
+object(Obj)#%d (3) {
+  ["a"]=>
+  int(1)
+  [%r"?b"?:protected"?%r]=>
+  int(2)
+  [%r"?c"?:("Obj":)?private"?%r]=>
+  int(3)
+}
+OK
+object(Obj)#%d (3) {
+  ["a"]=>
+  int(1)
+  [%r"?b"?:protected"?%r]=>
+  int(2)
+  [%r"?c"?:("Obj":)?private"?%r]=>
+  int(3)
+}
+OK
+object(Obj)#%d (3) {
+  ["a"]=>
+  array(3) {
+    [0]=>
+    int(1)
+    [1]=>
+    int(2)
+    [2]=>
+    int(3)
+  }
+  [%r"?b"?:protected"?%r]=>
+  array(3) {
+    [0]=>
+    int(4)
+    [1]=>
+    int(5)
+    [2]=>
+    int(6)
+  }
+  [%r"?c"?:("Obj":)?private"?%r]=>
+  NULL
+}
+OK

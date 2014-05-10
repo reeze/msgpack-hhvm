@@ -1,0 +1,21 @@
+
+Notice: %s
+nonexisting
+82c0a34f626aa163c0
+object(Obj)#%d (3) {
+  ["a"]=>
+  NULL
+  ["b"]=>
+  NULL
+  ["c"]=>
+  NULL
+}
+OK
+
+Notice: %s
+
+Warning: %s
+wrong
+82c0a34f706a
+bool(false)
+OK

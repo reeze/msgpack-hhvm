@@ -1,0 +1,9 @@
+autoload
+83c0a34f626aa16101a16202
+object(Obj)#%d (2) {
+  ["a"]=>
+  int(1)
+  ["b"]=>
+  int(2)
+}
+OK

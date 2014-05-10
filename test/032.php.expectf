@@ -1,0 +1,8 @@
+exception in __sleep 0
+exception in __wakeup 2
+object(Obj)#%d (2) {
+  ["a"]=>
+  int(0)
+  ["b"]=>
+  int(0)
+}

@@ -1,0 +1,81 @@
+array($a, $a)
+9291a3666f6f91a3666f6f
+array(2) {
+  [0]=>
+  array(1) {
+    [0]=>
+    string(3) "foo"
+  }
+  [1]=>
+  array(1) {
+    [0]=>
+    string(3) "foo"
+  }
+}
+OK
+array(&$a, &$a)
+9282c00100a3666f6f82c0020002
+array(2) {
+  [0]=>
+  &array(1) {
+    [0]=>
+    string(3) "foo"
+  }
+  [1]=>
+  &array(1) {
+    [0]=>
+    string(3) "foo"
+  }
+}
+OK
+cyclic
+9182c0010082c0010082c0020002
+array(1) {
+  [0]=>
+  &array(1) {
+    [0]=>
+    &array(1) {
+      [0]=>
+      &array(1) {
+        [0]=>
+        &array(1) {
+          [0]=>
+          *RECURSION*
+        }
+      }
+    }
+  }
+}
+OK
+array(1) {
+  [0]=>
+  &array(1) {
+    [0]=>
+    &array(1) {
+      [0]=>
+      &array(1) {
+        [0]=>
+        &array(1) {
+          [0]=>
+          *RECURSION*
+        }
+      }
+    }
+  }
+}
+array(1) {
+  [0]=>
+  &array(1) {
+    [0]=>
+    &array(1) {
+      [0]=>
+      &array(1) {
+        [0]=>
+        &array(1) {
+          [0]=>
+          *RECURSION*
+        }
+      }
+    }
+  }
+}

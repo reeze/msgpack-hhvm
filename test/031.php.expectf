@@ -1,0 +1,10 @@
+a, a, c
+call serialize, no throw
+call serialize, throw
+exception in serialize 2
+b, b, d
+call serialize, no throw
+call serialize, no throw
+call unserialize, no throw
+call unserialize, throw
+exception in unserialize 6

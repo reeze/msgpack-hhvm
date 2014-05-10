@@ -1,0 +1,39 @@
+array(2) {
+  [0]=>
+  object(MyObj)#%d (4) {
+    ["data:private"]=>
+    string(8) "datadata"
+    ["priv:private"]=>
+    string(8) "privdata"
+    ["pdata"]=>
+    string(8) "pubdata0"
+    ["subary"]=>
+    object(SubObj)#%d (3) {
+      ["subdata:private"]=>
+      string(11) "subdatadata"
+      ["subpriv:private"]=>
+      string(11) "subprivdata"
+      ["subpdata"]=>
+      string(11) "subpubdata0"
+    }
+  }
+  [1]=>
+  object(MyObj)#%d (4) {
+    ["data:private"]=>
+    string(8) "datadata"
+    ["priv:private"]=>
+    string(8) "privdata"
+    ["pdata"]=>
+    string(8) "pubdata1"
+    ["subary"]=>
+    object(SubObj)#%d (3) {
+      ["subdata:private"]=>
+      string(11) "subdatadata"
+      ["subpriv:private"]=>
+      string(11) "subprivdata"
+      ["subpdata"]=>
+      string(11) "subpubdata1"
+    }
+  }
+}
+OK

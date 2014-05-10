@@ -1,0 +1,9 @@
+bool(true)
+read
+wrote: 83c001a3666f6f01a474657374a6666f6f626172
+array(2) {
+  ["foo"]=>
+  int(1)
+  ["test"]=>
+  string(6) "foobar"
+}

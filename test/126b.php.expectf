@@ -1,0 +1,21 @@
+array(2) {
+  [0]=>
+  object(MyObj)#%d (3) {
+    ["data:private"]=>
+    string(8) "datadata"
+    ["priv:private"]=>
+    string(8) "privdata"
+    ["pdata"]=>
+    string(8) "pubdata0"
+  }
+  [1]=>
+  object(MyObj)#%d (3) {
+    ["data:private"]=>
+    string(8) "datadata"
+    ["priv:private"]=>
+    string(8) "privdata"
+    ["pdata"]=>
+    string(8) "pubdata1"
+  }
+}
+OK

@@ -1,0 +1,17 @@
+array
+82a16182a162a163a164a165a16681a167a168
+array(2) {
+  ["a"]=>
+  array(2) {
+    ["b"]=>
+    string(1) "c"
+    ["d"]=>
+    string(1) "e"
+  }
+  ["f"]=>
+  array(1) {
+    ["g"]=>
+    string(1) "h"
+  }
+}
+OK
