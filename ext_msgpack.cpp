@@ -15,9 +15,7 @@
 */
 
 #include "hphp/runtime/base/base-includes.h"
-#include <msgpack.hpp>
-
-#include "type-variant.h"
+#include "msgpack-variant.h"
 
 #define MSGPACK_HHVM_VERSION "0.0.1"
 

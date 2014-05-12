@@ -5,7 +5,8 @@
 #define MSGPACK_TYPE_VARIANT_H__
 
 #include "hphp/runtime/base/base-includes.h"
-#include "msgpack/object.hpp"
+
+#include <msgpack.hpp>
 
 using namespace HPHP;
 
