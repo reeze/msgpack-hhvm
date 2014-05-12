@@ -10,8 +10,6 @@
 
 using namespace HPHP;
 
-// TODO catch bad_cast exception???
-
 namespace msgpack {
 
 // Unpack

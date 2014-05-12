@@ -31,7 +31,13 @@ static String HHVM_FUNCTION(msgpack_pack, const Variant &var) {
 static Variant HHVM_FUNCTION(msgpack_unpack, const String &pack) {
   msgpack::zone zone;
   msgpack::object obj;
-  msgpack::unpack(pack.c_str(), pack.size(), NULL, &zone, &obj);
+
+  try {
+    msgpack::unpack(pack.c_str(), pack.size(), NULL, &zone, &obj);
+  } catch (msgpack::type_error&) {
+    raise_warning("unpack error");
+    return false;
+  }
 
   Variant v;
   obj.convert(&v);
