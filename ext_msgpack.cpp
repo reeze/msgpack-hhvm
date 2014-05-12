@@ -34,7 +34,6 @@ static Variant HHVM_FUNCTION(msgpack_unpack, const String &pack) {
   msgpack::unpack(pack.c_str(), pack.size(), NULL, &zone, &obj);
 
   Variant v;
-
   obj.convert(&v);
 
   return v;

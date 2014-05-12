@@ -30,15 +30,15 @@ inline Variant& operator>> (object o, Variant& v)
     case type::NEGATIVE_INTEGER:
       v = (int64_t) o.via.i64;
       break;
-	  case type::DOUBLE:
+    case type::DOUBLE:
       v = o.via.dec;
       break;
-	  case type::RAW:
+    case type::RAW:
       v = String((char*)o.via.raw.ptr, o.via.raw.size, AttachString);
       break;
-	  case type::ARRAY: {
+    case type::ARRAY: {
       Array array = Array::Create();
-		  if(o.via.array.size != 0) {
+      if(o.via.array.size != 0) {
         object* p(o.via.array.ptr);
         for(object* const pend(o.via.array.ptr + o.via.array.size);
             p < pend; ++p) {
@@ -54,7 +54,7 @@ inline Variant& operator>> (object o, Variant& v)
     }
     case type::MAP: {
       Array array = Array::Create();
-		  if(o.via.map.size != 0) {
+      if(o.via.map.size != 0) {
         object_kv* p(o.via.map.ptr);
         for(object_kv* const pend(o.via.map.ptr + o.via.map.size);
           p < pend; ++p) {
