@@ -1,4 +1,5 @@
 Eval {
+  Jit = false
   EnableXHP = true
   AllowHhas = true
   EnableHipHopSyntax = true
