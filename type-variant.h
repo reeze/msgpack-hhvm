@@ -51,6 +51,21 @@ inline Variant& operator>> (object o, Variant& v)
       v = array;
       break;
     }
+    case type::MAP: {
+      Array array = Array::Create();
+		  if(o.via.map.size != 0) {
+        object_kv* p(o.via.map.ptr);
+        for(object_kv* const pend(o.via.map.ptr + o.via.map.size);
+          p < pend; ++p) {
+          Variant key, val;
+          p->key >> key;
+          p->val >> val;
+          array.set(key, val, true);
+        }
+      }
+      v = array;
+      break;
+    }
     default:
       break;
   }
@@ -88,13 +103,18 @@ inline packer<Stream>& operator<< (packer<Stream>& o, const Variant& v)
       break;
     }
     case KindOfArray: {
-      if (v.toArray()->isVectorData()) {
-        o.pack_array(v.toArray().size());
-        for (ArrayIter iter(v.toArray()); iter; ++iter) {
+      Array array = v.toArray();
+      if (array->isVectorData()) {
+        o.pack_array(array.size());
+        for (ArrayIter iter(array); iter; ++iter) {
           o << iter.second();
         }
       } else {
-
+        o.pack_map(array.size());
+        for (ArrayIter iter(array); iter; ++iter) {
+          o << iter.first();
+          o << iter.second();
+        }
       }
       break;
     }
@@ -105,32 +125,6 @@ inline packer<Stream>& operator<< (packer<Stream>& o, const Variant& v)
   return o;
 }
 
-inline void operator<< (object::with_zone& o, const Variant& v)
-{
-  if (v.isString()) {
-    String str = v.toString();
-
-    o.type = type::RAW;
-    char* ptr = (char*)o.zone->malloc(str.size());
-    o.via.raw.ptr = ptr;
-    o.via.raw.size = (uint32_t)str.size();
-    memcpy(ptr, str.c_str(), str.size());
-  }
-}
-
-inline void operator<< (object& o, const Variant& v)
-{
-  if (v.isString()) {
-    String str = v.toString();
-
-    o.type = type::RAW;
-    o.via.raw.ptr = str.c_str();
-    o.via.raw.size = (uint32_t)str.size();
-  }
-}
-
-
 }  // namespace msgpack
 
 #endif
-
