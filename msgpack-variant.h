@@ -31,9 +31,14 @@ inline Variant& operator>> (object o, Variant& v)
     case type::DOUBLE:
       v = o.via.dec;
       break;
-    case type::RAW:
-      v = String((char*)o.via.raw.ptr, o.via.raw.size, AttachString);
+    case type::RAW: {
+      if (o.via.raw.size == 0) {
+        v = String("");
+      } else {
+        v = String((char*)o.via.raw.ptr, o.via.raw.size, AttachString);
+      }
       break;
+    }
     case type::ARRAY: {
       Array array = Array::Create();
       if(o.via.array.size != 0) {
