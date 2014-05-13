@@ -35,7 +35,7 @@ inline Variant& operator>> (object o, Variant& v)
       if (o.via.raw.size == 0) {
         v = String("");
       } else {
-        v = String((char*)o.via.raw.ptr, o.via.raw.size, AttachString);
+        v = String((char*)o.via.raw.ptr, o.via.raw.size, CopyString);
       }
       break;
     }

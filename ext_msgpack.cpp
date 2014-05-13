@@ -25,7 +25,7 @@ static String HHVM_FUNCTION(msgpack_pack, const Variant &var) {
   msgpack::sbuffer sbuf;
   msgpack::pack(sbuf, var);
 
-  return String(sbuf.data(), sbuf.size(), AttachString);
+  return String(sbuf.data(), sbuf.size(), CopyString);
 }
 
 static Variant HHVM_FUNCTION(msgpack_unpack, const String &pack) {
