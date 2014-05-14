@@ -45,6 +45,10 @@ static Variant HHVM_FUNCTION(msgpack_unpack, const String &pack) {
   return v;
 }
 
+#ifndef HHVM_FALIAS
+#define HHVM_FALIAS(fn, falias) HHVM_NAMED_FE(fn, HHVM_FN(falias))
+#endif
+
 static class MsgpackExtension : public Extension {
  public:
   MsgpackExtension() : Extension("msgpack", MSGPACK_HHVM_VERSION) {}
