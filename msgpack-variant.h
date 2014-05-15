@@ -77,10 +77,17 @@ inline Variant& operator>> (object o, Variant& v)
   return v;
 }
 
-// Pack
+
 template <typename Stream>
-inline packer<Stream>& operator<< (packer<Stream>& o, const Variant& v)
+inline packer<Stream>& pack_variant(packer<Stream>& o, const Variant& v, int depth=0)
 {
+  if (depth > 512) {
+    raise_warning("Nested too deep, greate than 512");
+    return o;
+  }
+
+  ++depth;
+
   switch (v.getType()) {
     case KindOfUninit:
     case KindOfNull:
@@ -111,13 +118,13 @@ inline packer<Stream>& operator<< (packer<Stream>& o, const Variant& v)
       if (array->isVectorData()) {
         o.pack_array(array.size());
         for (ArrayIter iter(array); iter; ++iter) {
-          o << iter.second();
+          pack_variant(o, iter.second(), depth);
         }
       } else {
         o.pack_map(array.size());
         for (ArrayIter iter(array); iter; ++iter) {
-          o << iter.first();
-          o << iter.second();
+          pack_variant(o, iter.first(), depth);
+          pack_variant(o, iter.second(), depth);
         }
       }
       break;
@@ -127,6 +134,13 @@ inline packer<Stream>& operator<< (packer<Stream>& o, const Variant& v)
   }
 
   return o;
+}
+
+// Pack
+template <typename Stream>
+inline packer<Stream>& operator<< (packer<Stream>& o, const Variant& v)
+{
+  return pack_variant(o, v);
 }
 
 }  // namespace msgpack
