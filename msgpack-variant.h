@@ -130,6 +130,7 @@ inline packer<Stream>& pack_variant(packer<Stream>& o, const Variant& v, int dep
       break;
     }
     default:
+      raise_warning("Not implemented source type");
       break;
   }
 
