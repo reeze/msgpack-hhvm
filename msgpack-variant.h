@@ -2,7 +2,7 @@
    +----------------------------------------------------------------------+
    | HipHop for PHP                                                       |
    +----------------------------------------------------------------------+
-   | Copyright (c) 2014-2014 Baidu, Inc.                                  |
+   | Copyright (c) 2014-2015 Baidu, Inc.                                  |
    +----------------------------------------------------------------------+
    | This source file is subject to version 3.01 of the PHP license,      |
    | that is bundled with this package in the file LICENSE, and is        |
@@ -19,13 +19,15 @@
 #ifndef MSGPACK_TYPE_VARIANT_H__
 #define MSGPACK_TYPE_VARIANT_H__
 
-#include "hphp/runtime/base/base-includes.h"
+#include "hphp/runtime/ext/extension.h"
+#include "hphp/runtime/base/array-iterator.h"
 
 #include <msgpack.hpp>
 
 using namespace HPHP;
 
 namespace msgpack {
+
 
 // Unpack
 inline Variant& operator>> (object o, Variant& v)
