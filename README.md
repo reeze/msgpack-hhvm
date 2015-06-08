@@ -16,7 +16,7 @@ Msgpack for HHVM, It is a msgpack binding for HHVM
 # Installation
 
 ```bash
-$ git clone https://github.com/reeze/msgpack-hhvm
+$ git clone https://github.com/reeze/msgpack-hhvm --depth=1
 $ cd msgpack-hhvm
 $ hphpize && cmake . && make
 $ cp msgpack.so /path/to/your/hhvm/ext/dir
