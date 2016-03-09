@@ -24,6 +24,12 @@
 
 #include <msgpack.hpp>
 
+# if HHVM_VERSION_ID < 31201
+# define KindOfStaticString KindOfStaticString
+# else
+# define KindOfStaticString KindOfPersistentString
+#endif
+
 using namespace HPHP;
 
 namespace msgpack {
