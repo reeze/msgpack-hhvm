@@ -136,6 +136,7 @@ inline packer<Stream>& pack_variant(packer<Stream>& o, const Variant& v, int dep
       o.pack_raw_body(str.c_str(), str.size());
       break;
     }
+    case KindOfPersistentArray:
     case KindOfArray: {
       Array array = v.toArray();
       if (array->isVectorData()) {
