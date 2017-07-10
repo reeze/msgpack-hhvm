@@ -105,7 +105,7 @@ template <typename Stream>
 inline packer<Stream>& pack_variant(packer<Stream>& o, const Variant& v, int depth=0)
 {
   if (depth > 512) {
-    raise_warning("Nested too deep, greate than 512");
+    raise_warning("To deep nesting: 512");
     return o;
   }
 
